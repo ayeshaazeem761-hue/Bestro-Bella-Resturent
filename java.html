@@ -1,0 +1,14 @@
+<script>
+function orderNow(item){
+  document.getElementById('item').value = item;
+  document.getElementById('order').scrollIntoView({behavior:'smooth'});
+  alert(item + "\n\nEnter your name and number below to confirm! 🍽️");
+}
+function confirmOrder(){
+  let n = document.getElementById('name').value;
+  let p = document.getElementById('phone').value;
+  let i = document.getElementById('item').value;
+  if(!n || !p){ document.getElementById('msg').innerText = "Please enter your name and phone number!"; return; }
+  document.getElementById('msg').innerText = "Thank you " + n + "! Your order (" + (i || "Bestro Bella Special") + ") has been confirmed. We will call you in 5 minutes. ❤️";
+}
+</script>
